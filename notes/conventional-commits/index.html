@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang=lang>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <title>tscanlon</title>
+
+        <link rel="apple-touch-icon" sizes="180x180" href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;favicon&#x2F;apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;favicon&#x2F;favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;favicon&#x2F;favicon-16x16.png">
+        <link rel="manifest" href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;site.webmanifest?h=d3283d8cdd099d8504a177b9dd71519055d52b6500e66b0f630e5e81e9b2ebb5">
+
+        <link media="all" href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;site.css?h=f0a430f1a6afade96e49fea36c40f7b79025c01eab28ae2459d2848ac9f3d75f" rel="stylesheet">
+        
+        <script src="https:&#x2F;&#x2F;tscanlon.dev&#x2F;elasticlunr.min.js?h=4f648b9e42abdef9c436e68776eca79c23596c798a9ef1400cf538d8a218b8cd"></script>
+        <script src="https:&#x2F;&#x2F;tscanlon.dev&#x2F;search_index.en.js?h=6b3eddec0ee381a1e6c0e72d8aa009c01593aef863be0bdb1fe5244a7abbde3f"></script>
+        <script async src="https:&#x2F;&#x2F;tscanlon.dev&#x2F;scripts&#x2F;search.js?h=62fc04a7b5e3ceaa995f9c512bc4187102c80b59bacb02bdd4bc4e4f9c67a8d3"></script>
+    </head>
+
+    <body>
+        
+        <header id="header">
+          <span class="header-item">
+
+<div class="search-container">
+  <input id="search" type="search" placeholder="Search">
+
+  <div class="search-results" style="display: none;">
+      <div class="search-results__items"></div>
+  </div>
+</div></span>
+          <span class="header-item"><a class="unstyle" href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;">tscanlon</a></span>
+          <span class="header-item"><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;sitemap&#x2F;">Sitemap</a></span>
+        </header>
+        
+
+        <main id="main" class="markdown-body">
+          
+    <div class="page-header sidebar-left">
+        <div class="header-item">
+            <header id="summary">
+    <h2 class="title">
+     
+        <a href="https://www.conventionalcommits.org">Conventional Commits</a>
+    
+     
+        <sub class="version">1.0.0</sub>
+    
+    </h2> 
+    
+    <dl>
+        
+
+        
+
+        
+
+         
+        <dt>Last Updated</dt>
+        <dd>2021-05-24</dd>
+        
+        
+        <dt>Reading Time</dt>
+        <dd>1 minute(s)</dd>
+    </dl>
+</header>
+        </div>
+        <div class="header-item">
+            
+
+<nav>
+    <h3>Table of Contents</h3>
+    <ul>
+        
+        <li>
+            <a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;conventional-commits&#x2F;#conventional-commits">Conventional Commits</a>
+            
+            <ul>
+                
+                <li>
+                    <a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;conventional-commits&#x2F;#format">Format</a>
+                </li>
+                
+                <li>
+                    <a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;conventional-commits&#x2F;#type">Type</a>
+                </li>
+                
+                <li>
+                    <a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;conventional-commits&#x2F;#scope">Scope</a>
+                </li>
+                
+                <li>
+                    <a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;conventional-commits&#x2F;#subject">Subject</a>
+                </li>
+                
+                <li>
+                    <a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;conventional-commits&#x2F;#body-optional">Body (Optional)</a>
+                </li>
+                
+                <li>
+                    <a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;conventional-commits&#x2F;#footer-optional">Footer (Optional)</a>
+                </li>
+                
+                <li>
+                    <a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;conventional-commits&#x2F;#eamples">Eamples</a>
+                </li>
+                
+            </ul>
+            
+        </li>
+        
+    </ul>
+</nav>
+
+        </div>
+    </div>
+
+    <article id="content">
+        <h1 id="conventional-commits">Conventional Commits</h1>
+<p>A specification for adding human and machine readable meaning to commit messages</p>
+<h2 id="format">Format</h2>
+<pre style="background-color:#1e1e1e;">
+<code><span style="color:#dcdcdc;">type(scope): subject
+
+Body
+Footer
+</span></code></pre><h2 id="type">Type</h2>
+<p><strong>feat</strong> - A New Feature</p>
+<p><strong>fix</strong> - A bug fix</p>
+<p><strong>docs</strong> - Changes in documentation</p>
+<p><strong>style</strong> - Styles changes, formatting, missing semicolons or whitespace</p>
+<p><strong>refactor</strong> - Code changes that neither fixes a bug or adds a feature</p>
+<p><strong>perf</strong> - Changes that improve performance</p>
+<p><strong>test</strong> - Add missing tests</p>
+<p><strong>chore</strong> or <strong>build</strong> - Changes to the build process</p>
+<p><strong>improvement</strong> - Improves a current implementation without adding a new feature or fixing a bug</p>
+<h2 id="scope">Scope</h2>
+<p>A scope is provided in paranthesis after a type. A scope is a phrase describing parts of the code affected by the changes. For example &quot;(userservice)&quot;</p>
+<h2 id="subject">Subject</h2>
+<p>The subject contains a short description of the applied changes</p>
+<h2 id="body-optional">Body (Optional)</h2>
+<p>Must begin one blank line after the description. Can provide additional contextual information</p>
+<p>Used to indicate breaking changes. For breaking changes the body must start with &quot;BREAKING CHANGE&quot;</p>
+<h2 id="footer-optional">Footer (Optional)</h2>
+<p>Use to reference issues affected by the code changes. For example &quot;Fixes #13&quot;</p>
+<p>Can also be used to indicate breaking changes by starting with &quot;BREAKING CHANGE&quot;</p>
+<h2 id="eamples">Eamples</h2>
+<pre style="background-color:#1e1e1e;">
+<code><span style="color:#dcdcdc;">feat(store): add purchase order button
+</span></code></pre><pre style="background-color:#1e1e1e;">
+<code><span style="color:#dcdcdc;">docs(readme): document how to get started
+</span></code></pre>
+    </article>
+
+    <nav class="sitemap sidebar-right screen-large">
+        <h3>Sitemap</h3>
+        
+
+
+    
+
+
+    <details open>
+        <summary><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;">tscanlon</a></summary>
+        <ul class="sitemap-list">
+            
+
+    
+    
+
+    
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;about&#x2F;">About</a></li>
+    
+
+
+
+            
+        </ul>
+    </details>
+
+
+    
+    
+    
+
+
+    <details open>
+        <summary><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;">Notes</a></summary>
+        <ul class="sitemap-list">
+            
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;redis&#x2F;">Redis</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;curl&#x2F;">Curl</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;openssl&#x2F;">OpenSSL</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;architecting&#x2F;">Architecting</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;exceptions&#x2F;">Exceptions</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;encryption&#x2F;">Encryption</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;rust&#x2F;">Rust</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;git&#x2F;">Git</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;jmeter&#x2F;">JMeter</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;jq&#x2F;">jq</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;iisexpress&#x2F;">IIS Express</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;sql-server&#x2F;">Microsoft SQL Server</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;conventional-commits&#x2F;">Conventional Commits</a></li>
+    
+
+
+
+            
+            
+                
+
+
+    <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;dotnet&#x2F;">.NET</a></li>
+    <ul>
+        
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;dotnet&#x2F;csharp&#x2F;">CSharp</a></li>
+    
+
+
+
+        
+    </ul>
+
+
+            
+                
+
+
+    <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;windows&#x2F;">Windows</a></li>
+    <ul>
+        
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;windows&#x2F;netsh&#x2F;">netsh</a></li>
+    
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;notes&#x2F;windows&#x2F;performance-monitor&#x2F;">Performance Monitor</a></li>
+    
+
+
+
+        
+    </ul>
+
+
+            
+            
+        </ul>
+    </details>
+
+
+    
+    
+
+
+    <details open>
+        <summary><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;projects&#x2F;">Projects</a></summary>
+        <ul class="sitemap-list">
+            
+
+    
+    
+        <li><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;projects&#x2F;reverse-dictionary&#x2F;">Reverse Dictionary</a></li>
+    
+
+
+
+            
+            
+            
+        </ul>
+    </details>
+
+
+    
+
+
+    </nav>
+  
+        </main>
+
+        
+          <footer id="footer">
+    <span class="footer-item"><a href="https:&#x2F;&#x2F;tscanlon.dev&#x2F;about&#x2F;">About</a></span>
+    <span class="footer-item"><a class="unstyle" href="#">Back to Top</a></span>
+    <span class="footer-item"><a href="https://github.com/gscanlon21">Github</a></span>
+</footer>
+           
+        
+        
+        
+    </body>
+</html>
